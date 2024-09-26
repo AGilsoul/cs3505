@@ -1,0 +1,118 @@
+I found run 1 interesting because we almsot get a Sierpinski triangle fracal!
+This is very cool. 26 in binary is 00011010 (array 01011000). This is interesting because
+with rule 126 (binary 01111110, array 01111110) we get a similar result, however it has thicker lines and isn't asymmetrical at the bottom.
+With rule 126, we seem to get the triangles because a cell only dies if it is alive and has 2 living neighbors, or is dead with no neighbors, so pairs of two survive (notice lines are two # thick).
+However with rule 26, cells only live if they are dead and have 1 neighbor (groups of 1 shift over), or are living and have 1 right neigbhor, which could account for the asymmetry when we get to the bottom 
+where we are forced to bring down the edge cells regardless of their neighbors, and then introduce groups of 2 at this point, and that is where we get the asymmetry I believe.
+
+I found run 2 interesting because while it does look like a fractal almost, and similar to the Sierpinski triangles,
+it is much more dense and chaotic while still maintaining some sort of pattern and symmetry. 
+Rule 105 in binary is 01101001 (array 10010110). This means there are as many conditions to live as there are to die, and I think because of that we get a somewhat dense output that also switches up.
+Notice, however that this pattern always favors groups with only 2 living cells and no living cells. When we go from the first generation to the second, we have groups on the edge that will always either have
+1 living cell or 2 living cells, and so we see them switch off a lot, and that switching I believe propagates inward, creating some of the trianles we see.
+
+Run 1
+Enter ruleset number: 26
+                                #                               
+                               # #                              
+                              #   #                             
+                             # # # #                            
+                            #       #                           
+                           # #     # #                          
+                          #   #   #   #                         
+                         # # # # # # # #                        
+                        #               #                       
+                       # #             # #                      
+                      #   #           #   #                     
+                     # # # #         # # # #                    
+                    #       #       #       #                   
+                   # #     # #     # #     # #                  
+                  #   #   #   #   #   #   #   #                 
+                 # # # # # # # # # # # # # # # #                
+                #                               #               
+               # #                             # #              
+              #   #                           #   #             
+             # # # #                         # # # #            
+            #       #                       #       #           
+           # #     # #                     # #     # #          
+          #   #   #   #                   #   #   #   #         
+         # # # # # # # #                 # # # # # # # #        
+        #               #               #               #       
+       # #             # #             # #             # #      
+      #   #           #   #           #   #           #   #     
+     # # # #         # # # #         # # # #         # # # #    
+    #       #       #       #       #       #       #       #   
+   # #     # #     # #     # #     # #     # #     # #     # #  
+  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   # 
+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
+                                                              # 
+                                                             #  
+                                                            # # 
+                                                           #    
+                                                          # #   
+                                                         #   #  
+                                                        # # # # 
+                                                       #        
+                                                      # #       
+                                                     #   #      
+                                                    # # # #     
+                                                   #       #    
+                                                  # #     # #   
+                                                 #   #   #   #  
+                                                # # # # # # # # 
+                                               #                
+                                              # #               
+                                             #   #     
+
+Run 2
+Enter ruleset number: 105
+                                #                               
+ ##############################   ############################# 
+ #                            # # #                           # 
+   ##########################  # #  #########################   
+ # #                        #   #   #                       # # 
+  #  ######################   #   #   #####################  #  
+     #                    # #   #   # #                   #     
+ ###   ##################  #  #   #  #  #################   ### 
+ # # # #                #       #       #               # # # # 
+  # # #  ##############   #####   #####   #############  # # #  
+   # #   #            # # #   # # #   # # #           #   # #   
+ #  #  #   ##########  # #  #  # #  #  # #  #########   #  #  # 
+         # #        #   #       #       #   #       # #         
+ #######  #  ######   #   #####   #####   #   #####  #  ####### 
+ #     #     #    # #   # #   # # #   # #   # #   #     #     # 
+   ###   ###   ##  #  #  #  #  # #  #  #  #  #  #   ###   ###   
+ # # # # # # # ##               #                 # # # # # # # 
+  # # # # # # ### #############   ###############  # # # # # #  
+   # # # # # ## ###           # # #             #   # # # # #   
+ #  # # # # ##### # #########  # #  ###########   #  # # # #  # 
+     # # # ##   ## ##       #   #   #         # #     # # #     
+ ###  # # ### # ##### #####   #   #   #######  #  ###  # #  ### 
+ # #   # ## ## ##   ###   # #   #   # #     #     # #   #   # # 
+  #  #  ######### # # # #  #  #   #  #  ###   ###  #  #   #  #  
+        #       ## # # #        #       # # # # #       #       
+ ######   ##### ### # #  ######   #####  # # # #  #####   ##### 
+ #    # # #   ### ## #   #    # # #   #   # # #   #   # # #   # 
+   ##  # #  # # #####  #   ##  # #  #   #  # #  #   #  # #  #   
+ # ##   #    # ##   #    # ##   #     #     #     #     #     # 
+  ### #   ##  ### #   ##  ### #   ###   ###   ###   ###   ###   
+  # ##  # ##  # ##  # ##  # ##  # # # # # # # # # # # # # # # # 
+   ###   ###   ###   ###   ###   # # # # # # # # # # # # # # #  
+ # # # # # # # # # # # # # # # #  # # # # # # # # # # # # # #   
+  # # # # # # # # # # # # # # #    # # # # # # # # # # # # #  # 
+   # # # # # # # # # # # # # #  ##  # # # # # # # # # # # #     
+ #  # # # # # # # # # # # # #   ##   # # # # # # # # # # #  ### 
+     # # # # # # # # # # # #  # ## #  # # # # # # # # # #   # # 
+ ###  # # # # # # # # # # #    ####    # # # # # # # # #  #  #  
+ # #   # # # # # # # # # #  ## #  # ##  # # # # # # # #         
+  #  #  # # # # # # # # #   ###    ###   # # # # # # #  ####### 
+         # # # # # # # #  # # # ## # # #  # # # # # #   #     # 
+ #######  # # # # # # #    # # #### # #    # # # # #  #   ###   
+ #     #   # # # # # #  ##  # ##  ## #  ##  # # # #     # # # # 
+   ###   #  # # # # #   ##   ###  ###   ##   # # #  ###  # # #  
+ # # # #     # # # #  # ## # # #  # # # ## #  # #   # #   # #   
+  # # #  ###  # # #    #### # #    # # ####    #  #  #  #  #  # 
+   # #   # #   # #  ## #  ## #  ##  # ##  # ##                  
+ #  #  #  #  #  #   ###   ###   ##   ###   ### ################ 
+                  # # # # # # # ## # # # # # ###              # 
+ ################  # # # # # # #### # # # # ## # ############ 
